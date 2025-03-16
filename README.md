@@ -23,7 +23,7 @@ This project demonstrates the implementation of a Library Management System usin
 ### 1. Set up the libraries
 
 - **Install Library**: install some of the most important libraries.
-```
+```python
 # Install Libraries
 
 !pip install pandas
