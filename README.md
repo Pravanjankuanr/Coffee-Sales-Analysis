@@ -46,15 +46,30 @@ import seaborn as sns
 
 - **Import CSV file**: .
 ```
-
+df = pd.read_csv(r'path')
 ```
 - **Import Excel file**: .
 ```
-
+df = pd.read_excel(r"path")
 ```
 - **Import from SQL database**: .
 ```
+!pip install mysql-connector-python
 
+import mysql.connector as sql
+conn = sql.connect(
+    host="localhost",
+    user="root",
+    password="@Raja2002",
+    use_pure = True,
+    database ='megha'
+)
+
+data = "select * from student"
+import pandas as pd
+df = pd.read_sql(data, conn)
+
+print(df) or df
 ```
 - **Import from Web**: .
 ```
