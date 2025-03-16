@@ -22,8 +22,11 @@ This project demonstrates the implementation of a Library Management System usin
 
 ### 1. Set up the libraries
 
-- **Database Creation**: Created a database named `library_db`.
-- **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
+- **Install Library**: install some of the most important libraries.
+```
+
+```    
+- **Import Libra**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 
 ```sql
 CREATE DATABASE library_db;
