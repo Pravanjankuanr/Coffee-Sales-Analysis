@@ -24,6 +24,8 @@ This project demonstrates the implementation of a Library Management System usin
 
 - **Install Library**: install some of the most important libraries.
 ```
+# Install Libraries
+
 !pip install pandas
 !pip install numpy
 !pip install matplotlib
@@ -32,6 +34,8 @@ This project demonstrates the implementation of a Library Management System usin
 - **Import Library**: Call Libraries for the using.
 
 ```
+# Import Libraries
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,9 +45,21 @@ import seaborn as sns
 ### 2. Import Data
 
 - **Import CSV file**: .
+```
+
+```
 - **Import Excel file**: .
+```
+
+```
 - **Import from SQL database**: .
+```
+
+```
 - **Import from Web**: .
+```
+
+```
 
 ### 3. Data Cleaning
 
