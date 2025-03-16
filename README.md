@@ -24,12 +24,18 @@ This project demonstrates the implementation of a Library Management System usin
 
 - **Install Library**: install some of the most important libraries.
 ```
-
+!pip install pandas
+!pip install numpy
+!pip install matplotlib
+!pip install seaborn
 ```    
 - **Import Library**: Call Libraries for the using.
 
 ```
-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 ```
 
 ### 2. Import Data
