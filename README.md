@@ -60,7 +60,7 @@ import mysql.connector as sql
 conn = sql.connect(
     host="localhost",
     user="root",
-    password="@Raja2002",
+    password="*****",
     use_pure = True,
     database ='megha'
 )
