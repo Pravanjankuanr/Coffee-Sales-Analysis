@@ -16,7 +16,7 @@ This project demonstrates the implementation of a Library Management System usin
 3. **Data Cleaning**: Utilize CTAS to create new tables based on query results.
 4. **Data Transformation**: Develop complex queries to analyze and retrieve specific data.
 5. **Chats and Reports**: Develop complex queries to analyze and retrieve specific data.
-6. **Additional **: Develop complex queries to analyze and retrieve specific data.
+6. **Additional**: Develop complex queries to analyze and retrieve specific data.
 
 ## Project Structure
 
