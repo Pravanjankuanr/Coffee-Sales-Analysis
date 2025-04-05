@@ -12,11 +12,11 @@ This project demonstrates the implementation of a Library Management System usin
 ## Objectives
 
 1. **Set up the libraries**: Install and import all the libraries.
-2. **Import Data**: Import data with various methods with the help of pandas.
-3. **Data Cleaning**: Utilize CTAS to create new tables based on query results.
-4. **Data Transformation**: Develop complex queries to analyze and retrieve specific data.
-5. **Chats and Reports**: Develop complex queries to analyze and retrieve specific data.
-6. **Additional**: Develop complex queries to analyze and retrieve specific data.
+2. **Import Data**: Import data using various methods with the help of Pandas.
+3. **Data Cleaning**: Data Cleaning.
+5. **Data Transformation**: Develop complex queries to analyze and retrieve specific data.
+6. **Chats and Reports**: Develop complex queries to analyze and retrieve specific data.
+7. **Additional**: Develop complex queries to analyze and retrieve specific data.
 
 ## Project Structure
 
@@ -77,6 +77,8 @@ print(df) or df
 ```
 
 ### 3. Data Cleaning
+
+
 
 ### 4. Data Transformation
 
