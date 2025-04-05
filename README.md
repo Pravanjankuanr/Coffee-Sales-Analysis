@@ -117,12 +117,18 @@ add columns
 df["month"] = df["date"].dt.strftime("%b %y") # capital b, y for full & small for mmm, yy
 ```
 
+
+```
+
+```
+
 ### 4. Export Data various method 
 
 ```python
 df.to_csv('output.csv', index=False)
 
 ```
+
 
 ### 4. Data Transformation
 
