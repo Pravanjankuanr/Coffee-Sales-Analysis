@@ -14,6 +14,7 @@ This project demonstrates the implementation of a Library Management System usin
 1. **Set up the libraries**: Install and import all the libraries.
 2. **Import Data**: Import data using various methods with the help of Pandas.
 3. **Data Cleaning**: Data Cleaning.
+4. **Data Export**: .
 5. **Data Transformation**: Develop complex queries to analyze and retrieve specific data.
 6. **Chats and Reports**: Develop complex queries to analyze and retrieve specific data.
 7. **Additional**: Develop complex queries to analyze and retrieve specific data.
@@ -78,7 +79,50 @@ print(df) or df
 
 ### 3. Data Cleaning
 
+check data type
+```
+df.dtypes
+```
+change data type
+```
+df = df.astype({
+    'date': 'datetime64[ns]',
+    'datetime': 'datetime64[ns]',
+    'cash_type': 'object',
+    'card': 'object',
+    'money': 'float64',
+    'coffee_name': 'object'
+})
+```
+extract time
+```
+df['time_only'] = df['datetime'].dt.time
+```
+drop
+```
+df = df.drop(columns=['datetime'])
+```
+Rename
+```
+df.rename(columns={
+    'time_only': 'time', 
+    'cash_type': 'mop', 
+    'card': 'card_details', 
+    'money': 'amount', 
+    'coffee_name': 'coffee'
+}, inplace=True)
+```
+add columns
+```
+df["month"] = df["date"].dt.strftime("%b %y")
+```
 
+### 4. Export Data various method 
+
+```python
+df.to_csv('output.csv', index=False)
+
+```
 
 ### 4. Data Transformation
 
