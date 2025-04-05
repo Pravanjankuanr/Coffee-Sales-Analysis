@@ -114,7 +114,7 @@ df.rename(columns={
 ```
 add columns
 ```
-df["month"] = df["date"].dt.strftime("%b %y")
+df["month"] = df["date"].dt.strftime("%b %y") # capital b, y for full & small for mmm, yy
 ```
 
 ### 4. Export Data various method 
