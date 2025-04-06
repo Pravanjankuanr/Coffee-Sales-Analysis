@@ -145,7 +145,6 @@ df = df.drop(columns=['datetime'])
 
 # For dropping multiple columns
 df = df.drop(columns=['datetime', 'only_time'])
-
 ```
 
 #### Rename Columns
@@ -160,8 +159,15 @@ df.rename(columns={
 ```
 
 #### Update Columns
+```python
+-- for one value
+df
+```
 
 #### Combine two data sets
+```
+df = pd.concat([df, df2]).reset_index(drop=True)
+```
 
 ### 4. Export Data various method 
 
@@ -169,28 +175,38 @@ df.rename(columns={
 df.to_csv('output.csv', index=False)
 ```
 
-### 5. Data Analysis & Findings
+### Data Transformation
 
-Task 1. **Sum**:
+#### 1. Data Analysis & Findings
+
+- **Total Revenue**:
 
 ```python
-SELECT * FROM books
-WHERE category = 'Classic';
+Total_revenue = df['amount'].sum()
+
+Total_revenue
 ```
 
-8. **Task 8: Find Total Rental Income by Category**:
+- **Total Sales**:
 
-```sql
-SELECT 
-    b.category,
-    SUM(b.rental_price),
-    COUNT(*)
-FROM 
-issued_status as ist
-JOIN
-books as b
-ON b.isbn = ist.issued_book_isbn
-GROUP BY 1
+```python
+Total_Sales = df['amount'].count()
+Total_Sales
+
+or
+
+df['amount'].count()
+```
+
+- **Total Sales mop wise**:
+
+```python
+Total_Sales = df['amount'].count()
+Total_Sales
+
+or
+
+df['amount'].count()
 ```
 
 ## Advanced py Operations
