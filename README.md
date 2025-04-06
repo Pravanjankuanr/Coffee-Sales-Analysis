@@ -34,7 +34,7 @@ This project demonstrates the implementation of a Library Management System usin
 ```    
 - **Import Library**: Call Libraries for the using.
 
-```
+```python
 # Import Libraries
 
 import pandas as pd
@@ -46,15 +46,15 @@ import seaborn as sns
 ### 2. Import Data
 
 - **Import CSV file**: .
-```
+```python
 df = pd.read_csv(r'path')
 ```
 - **Import Excel file**: .
-```
+```python
 df = pd.read_excel(r"path")
 ```
 - **Import from SQL database**: .
-```
+```python
 !pip install mysql-connector-python
 
 import mysql.connector as sql
@@ -73,7 +73,7 @@ df = pd.read_sql(data, conn)
 print(df) or df
 ```
 - **Import from Web**: .
-```
+```python
 
 ```
 
@@ -113,7 +113,7 @@ df = df.astype({
 ```
 #### Create New Columns
 
-```
+```python
 # Direct method to create new columns
 
 df['time_only'] = df['datetime'].dt.time # Extract only the time part from the 'datetime' column
@@ -139,7 +139,7 @@ df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 wit
 ```
 
 #### Remove Columns
-```
+```python
 # For dropping a single column
 df = df.drop(columns=['datetime'])
 
@@ -148,7 +148,7 @@ df = df.drop(columns=['datetime', 'only_time'])
 ```
 
 #### Rename Columns
-```
+```python
 df.rename(columns={
     'time_only': 'time', 
     'cash_type': 'mop', 
