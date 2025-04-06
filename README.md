@@ -113,9 +113,8 @@ df = df.astype({
 ```
 #### Create New Columns
 
+- Direct method to create new columns
 ```python
-# Direct method to create new columns
-
 df['time_only'] = df['datetime'].dt.time # Extract only the time part from the 'datetime' column
 
 df['outlet'] = "outlet1" # Create a new column 'outlet' with the same value ("outlet1") for all rows
@@ -130,6 +129,15 @@ df["day_name"] = df["date"].dt.strftime("%a") # Get abbreviated day name (e.g., 
 
 # Insert method to create new columns
 
+df.insert(1, "time", df['datetime'].dt.time) # Insert 'time' column at column index 1
+
+df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
+
+# %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
+# %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
+```
+- Insert method to create new columns
+```python
 df.insert(1, "time", df['datetime'].dt.time) # Insert 'time' column at column index 1
 
 df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
