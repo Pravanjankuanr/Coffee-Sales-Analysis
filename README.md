@@ -79,12 +79,29 @@ print(df) or df
 
 ### 3. Data Cleaning
 
-check data type
+#### Data Inspection
+
+```python
+df # Display the entire dataset
+
+df.head(10) # Show the first 10 rows of the dataset
+
+df.tail(10) # Show the last 10 rows of the dataset
+
+df.shape # Return the number of rows and columns (tuple format)
+
+df.columns # Display the column names of the dataset
+
+df.info() # Display summary information including column names, non-null counts, data types, and memory usage
+
+df.describe() # Show statistical summary of numerical columns (mean, std, min, max, etc.)
 ```
-df.dtypes
-```
-change data type
-```
+#### Modify Data Types
+
+```python
+df.dtypes # Display the data types of each column
+
+-- Convert specified columns to new data types
 df = df.astype({
     'date': 'datetime64[ns]',
     'datetime': 'datetime64[ns]',
@@ -94,9 +111,30 @@ df = df.astype({
     'coffee_name': 'object'
 })
 ```
-extract time
-```
-df['time_only'] = df['datetime'].dt.time
+#### Create New Columns
+
+```python
+-- Direct method to create new columns
+
+df['time_only'] = df['datetime'].dt.time                 # Extract only the time part from the 'datetime' column
+
+df['outlet'] = "outlet1"                                 # Create a new column 'outlet' with the same value ("outlet1") for all rows
+
+# Create 'month', 'week_number', and 'day_name' columns from the 'date' column
+df["month"] = df["date"].dt.strftime("%b %y")            # Format month as 'Jan 24' (short month name and year) 
+
+df['week_number'] = df['date'].dt.isocalendar().week     # Extract ISO week number
+
+df["day_name"] = df["date"].dt.strftime("%a")            # Get abbreviated day name (e.g., 'Fri')
+
+-- Insert method to create new columns
+
+df.insert(1, "time", df['datetime'].dt.time)             # Insert 'time' column at column index 1
+
+df.insert(3, "outlet", "outlet1")                        # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
+
+# %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
+# %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
 ```
 drop
 ```
