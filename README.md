@@ -127,23 +127,16 @@ df['week_number'] = df['date'].dt.isocalendar().week # Extract ISO week number
 
 df["day_name"] = df["date"].dt.strftime("%a") # Get abbreviated day name (e.g., 'Fri')
 
-# Insert method to create new columns
-
-df.insert(1, "time", df['datetime'].dt.time) # Insert 'time' column at column index 1
-
-df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
-
 # %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
 # %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
 ```
 - Insert method to create new columns
 ```python
-df.insert(1, "time", df['datetime'].dt.time) # Insert 'time' column at column index 1
+# Insert 'time' column at column index 1
+df.insert(1, "time", df['datetime'].dt.time)
 
-df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
-
-# %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
-# %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
+# Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
+df.insert(3, "outlet", "outlet1")
 ```
 
 #### Remove Columns
