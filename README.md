@@ -92,7 +92,7 @@ df.shape # Return the number of rows and columns (tuple format)
 
 df.columns # Display the column names of the dataset
 
-df.info() # Display summary information including column names, non-null counts, data types, and memory usage
+df.info() # Display information including column names, non-null counts, data types, and memory usage
 
 df.describe() # Show statistical summary of numerical columns (mean, std, min, max, etc.)
 ```
@@ -113,70 +113,67 @@ df = df.astype({
 ```
 #### Create New Columns
 
-```python
--- Direct method to create new columns
+```
+# Direct method to create new columns
 
-df['time_only'] = df['datetime'].dt.time                 # Extract only the time part from the 'datetime' column
+df['time_only'] = df['datetime'].dt.time # Extract only the time part from the 'datetime' column
 
-df['outlet'] = "outlet1"                                 # Create a new column 'outlet' with the same value ("outlet1") for all rows
+df['outlet'] = "outlet1" # Create a new column 'outlet' with the same value ("outlet1") for all rows
 
 # Create 'month', 'week_number', and 'day_name' columns from the 'date' column
-df["month"] = df["date"].dt.strftime("%b %y")            # Format month as 'Jan 24' (short month name and year) 
 
-df['week_number'] = df['date'].dt.isocalendar().week     # Extract ISO week number
+df["month"] = df["date"].dt.strftime("%b %y") # Format month as 'Jan 24' (short month name and year) 
 
-df["day_name"] = df["date"].dt.strftime("%a")            # Get abbreviated day name (e.g., 'Fri')
+df['week_number'] = df['date'].dt.isocalendar().week # Extract ISO week number
 
--- Insert method to create new columns
+df["day_name"] = df["date"].dt.strftime("%a") # Get abbreviated day name (e.g., 'Fri')
 
-df.insert(1, "time", df['datetime'].dt.time)             # Insert 'time' column at column index 1
+# Insert method to create new columns
 
-df.insert(3, "outlet", "outlet1")                        # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
+df.insert(1, "time", df['datetime'].dt.time) # Insert 'time' column at column index 1
+
+df.insert(3, "outlet", "outlet1") # Insert 'outlet' column at column index 3 with the same value ("outlet1") for all rows
 
 # %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
 # %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
 ```
-drop
+
+#### Remove Columns
 ```
+# For dropping a single column
 df = df.drop(columns=['datetime'])
+
+# For dropping multiple columns
+df = df.drop(columns=['datetime', 'only_time'])
+
 ```
-Rename
+
+#### Rename Columns
 ```
 df.rename(columns={
     'time_only': 'time', 
     'cash_type': 'mop', 
     'card': 'card_details', 
     'money': 'amount', 
-    'coffee_name': 'coffee'
+    'coffee_name': 'product'
 }, inplace=True)
 ```
-add columns
-```
-df["month"] = df["date"].dt.strftime("%b %y") # capital b, y for full & small for mmm, yy
-```
 
+#### Update Columns
 
-```
-
-```
+#### Combine two data sets
 
 ### 4. Export Data various method 
 
 ```python
 df.to_csv('output.csv', index=False)
-
 ```
-
-
-### 4. Data Transformation
 
 ### 5. Data Analysis & Findings
 
-The following SQL queries were used to address specific questions:
+Task 1. **Sum**:
 
-Task 7. **Retrieve All Books in a Specific Category**:
-
-```sql
+```python
 SELECT * FROM books
 WHERE category = 'Classic';
 ```
@@ -196,51 +193,9 @@ ON b.isbn = ist.issued_book_isbn
 GROUP BY 1
 ```
 
-9. **List Members Who Registered in the Last 180 Days**:
-```sql
-SELECT * FROM members
-WHERE reg_date >= CURRENT_DATE - INTERVAL '180 days';
-```
-
-10. **List Employees with Their Branch Manager's Name and their branch details**:
-
-```sql
-SELECT 
-    e1.emp_id,
-    e1.emp_name,
-    e1.position,
-    e1.salary,
-    b.*,
-    e2.emp_name as manager
-FROM employees as e1
-JOIN 
-branch as b
-ON e1.branch_id = b.branch_id    
-JOIN
-employees as e2
-ON e2.emp_id = b.manager_id
-```
-
-Task 11. **Create a Table of Books with Rental Price Above a Certain Threshold**:
-```sql
-CREATE TABLE expensive_books AS
-SELECT * FROM books
-WHERE rental_price > 7.00;
-```
-
-Task 12: **Retrieve the List of Books Not Yet Returned**
-```sql
-SELECT * FROM issued_status as ist
-LEFT JOIN
-return_status as rs
-ON rs.issued_id = ist.issued_id
-WHERE rs.return_id IS NULL;
-```
-
-## Advanced SQL Operations
+## Advanced py Operations
 
 **Task 13: Identify Members with Overdue Books**  
-Write a query to identify members who have overdue books (assume a 30-day return period). Display the member's_id, member's name, book title, issue date, and days overdue.
 
 ```sql
 SELECT 
