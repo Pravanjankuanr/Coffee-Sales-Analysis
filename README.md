@@ -187,13 +187,14 @@ Total_revenue = df['amount'].sum()
 
 Total_revenue
 ```
-sorting
-```
+
+- **Sorting Data**:
+
+```python
 df.sort_values(by='money', ascending=False, inplace=True)
 
 df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 ```
-
 
 - **Total Sales**:
 
@@ -216,6 +217,8 @@ or
 
 df['amount'].count()
 ```
+
+#### 2. Charts
 
 ## Advanced py Operations
 
