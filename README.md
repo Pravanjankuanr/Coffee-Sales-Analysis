@@ -219,7 +219,7 @@ df['amount'].count()
 ```
 
 #### 2. Charts
-**Work in Progress**
+**Work in Progress...**
 ## Advanced py Operations
 
 ## Conclusion
