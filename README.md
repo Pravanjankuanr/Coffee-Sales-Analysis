@@ -172,8 +172,19 @@ df = pd.concat([df, df2]).reset_index(drop=True)
 
 ### 4. Export Data various method 
 
+- **Export CSV file**: .
 ```python
 df.to_csv('output.csv', index=False)
+```
+
+- **Export excel file**: .
+```python
+df = pd.read_csv(r'path')
+```
+
+- **Export Json file**: .
+```python
+df = pd.read_csv(r'path')
 ```
 
 ### Data Transformation
