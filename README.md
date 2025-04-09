@@ -161,13 +161,22 @@ df.rename(columns={
 
 #### Update Columns
 ```python
--- for one value
-df
+# Single cell update
+df.loc[0, "cash_type"] = "UPI"
+
+# Multi cell update
+df['cash_type'] = "UPI"
+
 ```
 
 #### Combine two data sets
 ```
 df = pd.concat([df, df2]).reset_index(drop=True)
+```
+#### Missing data Handle
+
+```
+df['card'].isnull().sum()
 ```
 
 ### 4. Export Data various method 
