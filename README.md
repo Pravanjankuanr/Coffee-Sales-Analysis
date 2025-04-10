@@ -185,23 +185,35 @@ df = pd.concat([df, df2]).reset_index(drop=True)
 df['card'].isnull().sum()
 ```
 
-### 4. Export Data various method 
+### 4. Export Data through various methods 
 
-- **Export CSV file**: .
+- **Export CSV file**
 ```python
 df.to_csv('output.csv', index=False)
 ```
 
-- **Export excel file**: .
+- **Export excel file**
 ```python
-df = pd.read_csv(r'path')
+df.to_excel('output.xlsx', index=False)
+```
+
+- **Clipboard file**
+```python
+df.to_clipboard(index=False)
 ```
 
 - **Export Json file**: .
 ```python
-df = pd.read_csv(r'path')
+df.to_json('output.json', orient='records', lines=True)
+
+# Orient can be 'records', 'split', 'index', 'columns', 'values', etc.
+# Add lines=True for newline-delimited JSON.
 ```
 
+- **Export HTML file**: .
+```python
+df.to_html('output.html', index=False)
+```
 ### Data Transformation
 
 #### 1. Data Analysis & Findings
