@@ -161,7 +161,7 @@ df.rename(columns={
 
 #### Update Columns
 ```python
-# Single cell update
+# Single cell/ Conditional update
 df.loc[0, "cash_type"] = "UPI"
 
 # Multi cell update
