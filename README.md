@@ -150,6 +150,12 @@ df = df.drop(columns=['datetime', 'only_time'])
 
 #### Rename Columns
 ```python
+# Single Rename
+df.rename(columns={
+    'time_only': 'time'
+},  inplace=True)
+
+# Multi rename
 df.rename(columns={
     'time_only': 'time', 
     'cash_type': 'mop', 
