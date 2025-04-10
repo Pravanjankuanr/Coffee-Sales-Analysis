@@ -113,7 +113,7 @@ df = df.astype({
 ```
 #### Create New Columns
 
-- Direct method to create new columns
+- Direct method
 ```python
 df['time_only'] = df['datetime'].dt.time # Extract only the time part from the 'datetime' column
 
@@ -130,7 +130,7 @@ df["day_name"] = df["date"].dt.strftime("%a") # Get abbreviated day name (e.g., 
 # %B: Full month name (e.g., "January"), %Y: Four-digit year (e.g., "2024"), 
 # %d: Day of the month (01-31), %D: Date in MM/DD/YY format (e.g., "03/15/24")
 ```
-- Insert method to create new columns
+- Insert method
 ```python
 # Insert 'time' column at column index 1
 df.insert(1, "time", df['datetime'].dt.time)
