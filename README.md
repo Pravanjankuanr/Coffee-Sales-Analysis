@@ -197,12 +197,12 @@ df.to_csv('output.csv', index=False)
 df.to_excel('output.xlsx', index=False)
 ```
 
-- **Clipboard file**
+- **Clipboard**
 ```python
 df.to_clipboard(index=False)
 ```
 
-- **Export Json file**: .
+- **Export Json file**
 ```python
 df.to_json('output.json', orient='records', lines=True)
 
@@ -210,7 +210,7 @@ df.to_json('output.json', orient='records', lines=True)
 # Add lines=True for newline-delimited JSON.
 ```
 
-- **Export HTML file**: .
+- **Export HTML file**
 ```python
 df.to_html('output.html', index=False)
 ```
