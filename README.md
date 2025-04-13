@@ -179,6 +179,7 @@ df['cash_type'] = "UPI"
 ```
 df = pd.concat([df, df2]).reset_index(drop=True)
 ```
+
 #### Missing data Handle
 
 ```
@@ -193,6 +194,46 @@ df.isnull().sum()
 
 # Rows with at least one null
 df[df.isnull().any(axis=1)]
+```
+
+#### Missing data remove
+
+```python
+# Drop rows with any NaNs
+df.dropna(inplace=True)
+
+# Drop columns with any NaNs
+df.dropna(axis=1, inplace=True)
+
+# 0 = rows & 1 = columns
+
+# Drop rows where all values are NaN
+df.dropna(how='all', inplace=True)
+
+# You can only use two values for how:
+
+# any: Drop the row or column if any values are NaN.
+# all: Drop the row or column only if all values are NaN.
+
+# Drop rows if NaN in specific columns
+df.dropna(subset=['card', 'money'], inplace = True)
+```
+
+#### Filling data remove
+```python
+# Fill NaNs with a specific value
+df.fillna(0)
+
+# Forward fill
+df.fillna(method='ffill')
+
+# Backward fill
+df.fillna(method='bfill')
+
+# Fill with mean/median/mode
+df['col'].fillna(df['col'].mean())
+
+
 ```
 
 ### 4. Export Data through various methods 
