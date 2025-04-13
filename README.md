@@ -182,7 +182,17 @@ df = pd.concat([df, df2]).reset_index(drop=True)
 #### Missing data Handle
 
 ```
+# Returns True/False for each cell
+df.isnull()
+
+# Count of missing data in the column
 df['card'].isnull().sum()
+
+# Count of nulls in each column
+df.isnull().sum()
+
+# Rows with at least one null
+df[df.isnull().any(axis=1)]
 ```
 
 ### 4. Export Data through various methods 
