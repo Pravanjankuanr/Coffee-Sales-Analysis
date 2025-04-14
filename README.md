@@ -293,14 +293,14 @@ or
 df['amount'].count()
 ```
 
-- **Total Sales mop wise**
+- **Revenue mode of payment wise**
 ```python
-Total_Sales = df['amount'].count()
-Total_Sales
+df[df['mop'] == 'card']['amount'].sum(), df[df['mop'] == 'cash']['amount'].sum()
+```
 
-or
-
-df['amount'].count()
+- **Sales mode of payment wise**
+```python
+df[df['mop'] == 'card']['amount'].count(), df[df['mop'] == 'cash']['amount'].count()
 ```
 
 - **Sorting Data**:
