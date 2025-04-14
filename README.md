@@ -222,13 +222,13 @@ df.dropna(subset=['card', 'money'], inplace = True)
 #### Filling data remove
 ```python
 # Fill NaNs with a specific value
-df.fillna(0)
+df.fillna('value', inplace=True)
 
 # Forward fill
-df.fillna(method='ffill')
+df.fillna(method='ffill', inplace=True)
 
 # Backward fill
-df.fillna(method='bfill')
+df.fillna(method='bfill', inplace=True)
 
 # Fill with mean/median/mode
 df['col'].fillna(df['col'].mean())
