@@ -5,7 +5,7 @@
 **Project Title**: Coffee Store Sales Analysis  
 **Level**: Intermediate  
 
-This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
+This project analyzes sales data from two coffee outlets using Python. Each dataset was cleaned separately and then combined for analysis. Standard columns such as month, year, and day name were added to enrich the data before exporting. The goal is to uncover sales insights and enhance Python skills through practical data analysis.
 
 ![Logo](Logo.jpg)
 
