@@ -45,15 +45,15 @@ import seaborn as sns
 
 ### 2. Import Data
 
-- **Import CSV file**: .
+- **Import CSV file**
 ```python
 df = pd.read_csv(r'path')
 ```
-- **Import Excel file**: .
+- **Import Excel file**
 ```python
 df = pd.read_excel(r"path")
 ```
-- **Import from SQL database**: .
+- **Import from SQL database**
 ```python
 !pip install mysql-connector-python
 
@@ -72,7 +72,7 @@ df = pd.read_sql(data, conn)
 
 print(df) or df
 ```
-- **Import from Web**: .
+- **Import from Web**
 ```python
 
 ```
@@ -80,24 +80,30 @@ print(df) or df
 ### 3. Data Cleaning
 
 #### Data Inspection
-
 ```python
-df # Display the entire dataset
+# Display the entire dataset
+df
 
-df.head(10) # Show the first 10 rows of the dataset
+# Show the first 10 rows of the dataset
+df.head(10)
 
-df.tail(10) # Show the last 10 rows of the dataset
+# Show the last 10 rows of the dataset
+df.tail(10)
 
-df.shape # Return the number of rows and columns (tuple format)
+# Return the number of rows and columns (tuple format)
+df.shape
 
-df.columns # Display the column names of the dataset
+# Display the column names of the dataset
+df.columns
 
-df.info() # Display information including column names, non-null counts, data types, and memory usage
+# Display information including column names, non-null counts, data types, and memory usage
+df.info()
 
-df.describe() # Show statistical summary of numerical columns (mean, std, min, max, etc.)
+# Show statistical summary of numerical columns (mean, std, min, max, etc.)
+df.describe()
 ```
-#### Modify Data Types
 
+#### Modify Data Types
 ```python
 df.dtypes # Display the data types of each column
 
