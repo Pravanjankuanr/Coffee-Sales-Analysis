@@ -124,11 +124,11 @@ df = df.astype({
 ```python
 df['time_only'] = df['datetime'].dt.time # Extract only the time part from the 'datetime' column
 
-df['outlet'] = "outlet1" # Create a new column 'outlet' with the same value ("outlet1") for all rows
+df['outlet'] = "outlet1" # Create a new column 'outlet' with the same value "outlet1" for all rows
 
 # Create 'month', 'week_number', and 'day_name' columns from the 'date' column
 
-df["month"] = df["date"].dt.strftime("%b %y") # Format month as 'Jan 24' (short month name and year) 
+df["month"] = df["date"].dt.strftime("%b %y") # Format month as 'Jan 24' (short month name and year)
 
 df['week_number'] = df['date'].dt.isocalendar().week # Extract ISO week number
 
