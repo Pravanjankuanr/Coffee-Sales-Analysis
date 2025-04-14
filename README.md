@@ -303,21 +303,30 @@ df[df['mop'] == 'card']['amount'].sum(), df[df['mop'] == 'cash']['amount'].sum()
 df[df['mop'] == 'card']['amount'].count(), df[df['mop'] == 'cash']['amount'].count()
 ```
 
-- **Sorting Data**:
+#### 2. Data Sorting
 
+- **Sorting Data**:
 ```python
 df.sort_values(by='money', ascending=False, inplace=True)
 
 df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 ```
 
+#### 2. Data Grouping
 
+- **Grouping Data**:
+```python
+df.sort_values(by='money', ascending=False, inplace=True)
 
+df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
+```
 
 #### 2. Charts
+
 **Work in Progress....**
+
 ## Advanced py Operations
 
 ## Conclusion
 
-This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, and advanced querying, providing a solid foundation for data management and analysis.
+This project demonstrates the use of Python for coffee sales analysis, currently utilizing libraries like Pandas for data manipulation, analysis, and basic visualization. It establishes a strong foundation for data-driven insights, with plans to integrate additional libraries such as NumPy and Matplotlib in future stages. The project is a work in progress, continuously evolving to deepen analytical capabilities and enhance Python proficiency.
