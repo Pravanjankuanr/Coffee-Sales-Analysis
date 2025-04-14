@@ -105,9 +105,10 @@ df.describe()
 
 #### Modify Data Types
 ```python
-df.dtypes # Display the data types of each column
+# Display the data types of each column
+df.dtypes
 
--- Convert specified columns to new data types
+# Convert specified columns to new data types
 df = df.astype({
     'date': 'datetime64[ns]',
     'datetime': 'datetime64[ns]',
