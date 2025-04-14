@@ -271,16 +271,35 @@ df.to_json('output.json', orient='records', lines=True)
 ```python
 df.to_html('output.html', index=False)
 ```
-### Data Transformation
+### 5. Data Transformation
 
 #### 1. Data Analysis & Findings
-
-- **Total Revenue**:
+- **Total Revenue**
 
 ```python
 Total_revenue = df['amount'].sum()
 
 Total_revenue
+```
+
+- **Total Sales**
+```python
+Total_Sales = df['amount'].count()
+Total_Sales
+
+or
+
+df['amount'].count()
+```
+
+- **Total Sales mop wise**
+```python
+Total_Sales = df['amount'].count()
+Total_Sales
+
+or
+
+df['amount'].count()
 ```
 
 - **Sorting Data**:
@@ -291,27 +310,8 @@ df.sort_values(by='money', ascending=False, inplace=True)
 df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 ```
 
-- **Total Sales**:
 
-```python
-Total_Sales = df['amount'].count()
-Total_Sales
 
-or
-
-df['amount'].count()
-```
-
-- **Total Sales mop wise**:
-
-```python
-Total_Sales = df['amount'].count()
-Total_Sales
-
-or
-
-df['amount'].count()
-```
 
 #### 2. Charts
 **Work in Progress....**
