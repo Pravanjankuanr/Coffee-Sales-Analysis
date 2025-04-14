@@ -316,9 +316,8 @@ df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 
 - **Grouping Data**:
 ```python
-df.sort_values(by='money', ascending=False, inplace=True)
 
-df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
+
 ```
 
 #### 2. Charts
@@ -326,6 +325,12 @@ df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 **Work in Progress....**
 
 ## Advanced py Operations
+
+### 1. Pivot
+
+### 2. Interpolation
+
+### 3. Eval
 
 ## Conclusion
 
