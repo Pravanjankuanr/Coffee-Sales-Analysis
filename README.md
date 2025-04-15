@@ -293,6 +293,31 @@ or
 df['amount'].count()
 ```
 
+- **Avg. amount per Sales**
+```python
+Total_Sales = df['amount'].count()
+Total_Sales
+
+or
+
+df['amount'].count()
+```
+
+- **Highest Ordered product**
+```python
+
+```
+
+- **Highest Revenue Product**
+```python
+
+```
+
+- **Revenue by Outlet**
+```python
+
+```
+
 - **Revenue mode of payment wise**
 ```python
 df[df['mop'] == 'card']['amount'].sum(), df[df['mop'] == 'cash']['amount'].sum()
@@ -301,6 +326,16 @@ df[df['mop'] == 'card']['amount'].sum(), df[df['mop'] == 'cash']['amount'].sum()
 - **Sales mode of payment wise**
 ```python
 df[df['mop'] == 'card']['amount'].count(), df[df['mop'] == 'cash']['amount'].count()
+```
+
+- **Monthly Sales**
+```python
+
+```
+
+- **Top Ordering Day of the Week**
+```python
+
 ```
 
 #### 2. Data Sorting
