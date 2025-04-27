@@ -184,7 +184,9 @@ df['cash_type'] = "UPI"
 
 #### Combine two data sets
 ```
-df = pd.concat([df, df2]).reset_index(drop=True)
+df = pd.concat([df, df2], axis = 0).reset_index(drop=True)
+
+# axis=0 refers to rows, and axis=1 refers to columns
 ```
 
 #### Missing data Handle
