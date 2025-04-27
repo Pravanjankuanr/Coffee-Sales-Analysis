@@ -351,7 +351,25 @@ df.sort_values(by=['money', 'date'], ascending=[False, True], inplace=True)
 
 - **Grouping Data**:
 ```python
+# Group by one column, aggregate one column
+df.groupby('mop')['amount'].sum()
 
+# Group by one column, aggregate multiple columns
+df.groupby('mop')[['amount', 'discount']].sum()
+
+df.groupby('mop').agg({
+    'amount': 'sum',
+    'discount': 'mean'
+})
+
+# Group by multiple columns, aggregate one column
+df.groupby(['region', 'mop'])['amount'].sum()
+
+# Group by multiple columns, aggregate multiple columns
+df.groupby(['region', 'mop']).agg({
+    'amount': ['sum', 'mean'],
+    'discount': ['sum', 'max']
+})
 
 ```
 
