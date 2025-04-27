@@ -381,6 +381,27 @@ df.groupby(['region', 'mop']).agg({
 
 ### 1. Pivot
 
+```python
+# Basic Pivot Table
+pd.pivot_table(df, values='amount', index='outlet', columns='mop', aggfunc='sum')
+
+#Pivot Table with Multiple Aggregations
+pd.pivot_table(df, 
+               values=['amount', 'discount'], 
+               index='region', 
+               columns='mop', 
+               aggfunc={'amount': 'sum', 'discount': 'mean'})
+
+# Add Totals
+pd.pivot_table(df, 
+               values='amount', 
+               index='region', 
+               columns='mop', 
+               aggfunc='sum', 
+               margins=True)
+
+```
+
 ### 2. Interpolation
 
 ### 3. Eval
