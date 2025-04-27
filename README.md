@@ -332,7 +332,7 @@ df[df['mop'] == 'card']['amount'].count(), df[df['mop'] == 'cash']['amount'].cou
 
 - **Monthly Sales**
 ```python
-
+monthly_sales = df.groupby('month')['amount'].sum().reset_index()
 ```
 
 - **Top Ordering Day of the Week**
